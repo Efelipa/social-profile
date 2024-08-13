@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+:root {
+    --mobile-screen: 375px;
+    --desktop-screen: 1440px;
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800:  hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+    --main-font: 'Inter';
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    font-family: var(--main-font);
+    font-size: 14px;
+    p, h1 {
+        margin: 0;
+        padding: 0;
+    }
+}
+#root {
+    background-color: var(--grey-900);
+    min-height: 120vh;
+    display: grid;
+    place-items: center;
+}
+.social-card-sample {
+    background: var(--grey-800);
+    border-radius: 10px;
+    padding: 35px;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    width: calc(var(--mobile-screen) + 50px);
+    transition: .3s width ease-in-out;
+    .social-image {
+        border-radius: 50%;
+        align-self: center;
+        width: 50%;
+    }
+}
+/* Header card */
+.card-info {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+.info {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    .name, .location {
+        font-weight: 700;
+    };
+    .location {
+        color: var(--green);
+        margin-bottom: 10px;
+    };
+    .position {
+        font-weight: 400;
+    }
+}
+/* Social, card */
+.card-social {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+}
+.social {
+    background: var(--grey-700);
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px;
+}
+.social:hover {
+    background: var(--green);
+    color: var(--grey-900);
+}
+/* Footer */
+.attribution {
+    height: 40px;
+    background: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--grey-900);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 660px) {
+    .social-card-sample {
+        width: var(--mobile-screen);
+    }
+}
